@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E90FF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/center_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et1"
+        android:src="@drawable/vaccination"
+        android:padding="15dp"/>
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center_line"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:hint="Enter Pincode"
+        android:inputType="number"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center_line"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:hint="Enter Date (DD-MM-YY)"
+        android:inputType="date"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/et2"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="8dp"
+        android:text="Get Details"
+        android:textAllCaps="false"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/bookVaccineButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Book your Vaccination"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#F4A460"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>
