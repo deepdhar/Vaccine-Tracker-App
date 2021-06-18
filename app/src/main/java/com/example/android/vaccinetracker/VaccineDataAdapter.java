@@ -15,8 +15,6 @@ public class VaccineDataAdapter extends RecyclerView.Adapter<VaccineDataAdapter.
 
     LayoutInflater inflater;
     List<VaccineData> vaccineData;
-//    VaccineData[] vaccineData;
-//    Context context;
 
     public VaccineDataAdapter(List<VaccineData> vaccineData, Context context) {
         this.vaccineData = vaccineData;
@@ -38,6 +36,7 @@ public class VaccineDataAdapter extends RecyclerView.Adapter<VaccineDataAdapter.
         holder.dose1Tv.setText(vaccineData.get(position).getDose1());
         holder.dose2Tv.setText(vaccineData.get(position).getDose2());
         holder.minAgeLimitTv.setText(vaccineData.get(position).getMinAgeLimit());
+//        holder.vaccineFee.setText(vaccineData.get(position).getVaccineFee());
         holder.vaccineTv.setText(vaccineData.get(position).getVaccine());
     }
 
@@ -52,6 +51,7 @@ public class VaccineDataAdapter extends RecyclerView.Adapter<VaccineDataAdapter.
         TextView dose1Tv;
         TextView dose2Tv;
         TextView minAgeLimitTv;
+        TextView vaccineFee;
         TextView vaccineTv;
 
         public ViewHolder(@NonNull View itemView) {
@@ -61,6 +61,7 @@ public class VaccineDataAdapter extends RecyclerView.Adapter<VaccineDataAdapter.
             dose1Tv = itemView.findViewById(R.id.dose1_tv);
             dose2Tv = itemView.findViewById(R.id.dose2_tv);
             minAgeLimitTv = itemView.findViewById(R.id.minAgeLimit_tv);
+//            vaccineFee = itemView.findViewById(R.id.vaccinationFee_tv);
             vaccineTv = itemView.findViewById(R.id.vaccineName_tv);
         }
     }

@@ -7,6 +7,7 @@ public class VaccineData {
     private String mDose1;
     private String mDose2;
     private String mMinAgeLimit;
+    private String mVaccineFee;
     private String mVaccine;
 
     public VaccineData() {}
@@ -16,6 +17,7 @@ public class VaccineData {
         mDose1 = dose1;
         mDose2 = dose2;
         mMinAgeLimit = minAgeLimit;
+//        mVaccineFee = vaccineFee;
         mVaccine = vaccine;
     }
 
@@ -58,6 +60,14 @@ public class VaccineData {
     public void setMinAgeLimit(String minAgeLimit) {
         mMinAgeLimit = minAgeLimit;
     }
+
+//    public String getVaccineFee() {
+//        return  mVaccineFee;
+//    }
+//
+//    public void setVaccineFee(String vaccineFee) {
+//        mVaccineFee = vaccineFee;
+//    }
 
     public String getVaccine() {
         return mVaccine;
