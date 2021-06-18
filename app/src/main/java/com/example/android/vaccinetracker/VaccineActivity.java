@@ -26,8 +26,7 @@ import java.util.List;
 
 public class VaccineActivity extends AppCompatActivity {
 
-//    private EditText pinEt, dateEt;
-    private TextView venueTv, dateTv, dose1Tv, dose2Tv, minAgeLimitTv, vaccineTv;
+    private TextView venueTv, dateTv, dose1Tv, dose2Tv, minAgeLimitTv, vaccinationFeeTv, vaccineTv;
 
     List<VaccineData> vaccineDatas;
     RecyclerView recyclerView;
@@ -43,16 +42,6 @@ public class VaccineActivity extends AppCompatActivity {
         String date = intent.getStringExtra(MainActivity.EXTRA_DATE);
 
         recyclerView = findViewById(R.id.data_recyclerview);
-
-//        pinEt = findViewById(R.id.et1);
-//        dateEt = findViewById(R.id.et2);
-
-        venueTv = findViewById(R.id.venue_tv);
-        dateTv = findViewById(R.id.date_tv);
-        dose1Tv = findViewById(R.id.dose1_tv);
-        dose2Tv = findViewById(R.id.dose2_tv);
-        minAgeLimitTv = findViewById(R.id.minAgeLimit_tv);
-        vaccineTv = findViewById(R.id.vaccineName_tv);
 
         vaccineDatas = new ArrayList<>();
 
@@ -73,7 +62,7 @@ public class VaccineActivity extends AppCompatActivity {
                         JSONObject each = main_array.getJSONObject(i);
                         JSONArray sessions = each.getJSONArray("sessions");
                         VaccineData vaccineData = new VaccineData();
-                        for(int j=0; j<sessions.length(); j++){
+                        for(int j=0; j<sessions.length(); j++) {
                             JSONObject session = sessions.getJSONObject(j);
 
                             /* Venue Name */
@@ -105,7 +94,19 @@ public class VaccineActivity extends AppCompatActivity {
                             /* Minimum age limit */
                             int minAgeLimit = session.getInt("min_age_limit");
                             String minAgeLimit_str = String.valueOf(minAgeLimit);
-                            vaccineData.setMinAgeLimit("Min age limit: " + minAgeLimit_str);
+                            vaccineData.setMinAgeLimit("min age limit: " + minAgeLimit_str);
+
+//                            /* vaccine fee */
+//                            String fee_type = each.getString("fee_type");
+//                            if(!fee_type.equals("Free")) {
+//                                JSONArray vaccine_fees = each.getJSONArray("vaccine_fees");
+//                                JSONObject vaccine_object = vaccine_fees.getJSONObject(1);
+//                                String fee = vaccine_object.getString("fee");
+//                                vaccineData.setVaccineFee("vaccination fee: " + fee);
+//                            } else {
+//                                String fee = "Free";
+//                                vaccineData.setVaccineFee("vaccination fee: " + fee);
+//                            }
 
                             /* Vaccine Name */
                             String vaccine = session.getString("vaccine");

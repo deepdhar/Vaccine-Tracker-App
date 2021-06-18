@@ -4,13 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,10 +69,14 @@ public class MainActivity extends AppCompatActivity {
         String pinCode = pinEt.getText().toString();
         String date = dateEt.getText().toString();
 
-        Intent i = new Intent(this, VaccineActivity.class);
-        i.putExtra(EXTRA_PIN, pinCode);
-        i.putExtra(EXTRA_DATE, date);
-        startActivity(i);
+        if(!pinCode.equals("") && !date.equals("")) {
+            Intent i = new Intent(this, VaccineActivity.class);
+            i.putExtra(EXTRA_PIN, pinCode);
+            i.putExtra(EXTRA_DATE, date);
+            startActivity(i);
+        } else {
+            Toast.makeText(this, "Fill both fields", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
