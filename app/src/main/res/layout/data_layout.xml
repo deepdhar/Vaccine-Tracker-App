@@ -1,76 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="18dp"
+    android:layout_marginBottom="15dp"
+    android:elevation="12dp"
     app:cardCornerRadius="7dp"
-    android:layout_marginBottom="12dp">
+    android:paddingVertical="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FBE7E7"
         android:orientation="vertical"
-        android:padding="12dp"
-        android:background="@color/white">
+        android:padding="12dp">
 
-        <TextView
-            android:id="@+id/venue_tv"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Siliguri MH"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/venue_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="UPHC-8 SMC"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/minAgeLimit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="18+"
+                android:background="@drawable/age_bg"
+                android:paddingVertical="1dp"
+                android:paddingHorizontal="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/venue_address_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siliguri UPHC 8 Ward No. 47 Paticolony"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/state_dist_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="West Bengal, Darjeeling"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/date_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="18-06-2021"
+            android:text="Date: 18-06-2021"
             android:textColor="@color/black"
-            android:textSize="16sp"/>
+            android:textSize="15sp" />
 
-        <TextView
-            android:id="@+id/dose1_tv"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Available Dose1: "
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="16sp"/>
+            android:layout_marginVertical="12dp">
 
-        <TextView
-            android:id="@+id/dose2_tv"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dose_bg"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:id="@+id/dose1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dose 1: "
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/dose_bg"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:id="@+id/dose2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dose 2: "
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Available Dose2: "
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="16sp"/>
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/minAgeLimit_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="min. age limit: "
-            android:textColor="@color/black"
-            android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/vaccineName_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COVISHILED"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/vaccinationFee_tv"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="vaccination fee: "-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="16sp"/>-->
+            <TextView
+                android:id="@+id/vaccinationFee_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paid: "
+                android:textColor="#FFE13D3D"
+                android:textStyle="bold"
+                android:layout_toLeftOf="@id/vaccinationFee_tv2"
+                android:textSize="15sp"/>
 
-        <TextView
-            android:id="@+id/vaccineName_tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Vaccine name: "
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold|italic"/>
+            <TextView
+                android:id="@+id/vaccinationFee_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="780"
+                android:layout_alignParentEnd="true"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 

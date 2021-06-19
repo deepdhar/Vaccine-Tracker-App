@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1E90FF"
+    android:paddingHorizontal="8dp"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/et1"
         android:padding="15dp"
-        android:src="@drawable/vaccination" />
+        android:src="@drawable/vaccination"
+        android:contentDescription="@string/app_name" />
 
     <EditText
         android:id="@+id/et1"
@@ -28,12 +29,15 @@
         android:layout_marginHorizontal="18dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/white"
+        android:background="@drawable/edittext_bg"
         android:hint="Enter Pincode"
         android:inputType="number"
-        android:padding="8dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColorHint="#959595"
+        android:textSize="16sp"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/et2"
@@ -42,12 +46,14 @@
         android:layout_below="@id/et1"
         android:layout_marginHorizontal="18dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/white"
+        android:background="@drawable/edittext_bg"
         android:hint="Enter Date (DD-MM-YYYY)"
         android:inputType="date"
-        android:padding="8dp"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/black"
-        android:textColorHint="@android:color/darker_gray" />
+        android:textColorHint="#959595"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button"
@@ -73,6 +79,5 @@
         android:text="Book your Vaccination"
         android:textAllCaps="false"
         android:textSize="16sp" />
-
 
 </RelativeLayout>
