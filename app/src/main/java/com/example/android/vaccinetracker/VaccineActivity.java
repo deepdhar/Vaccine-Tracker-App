@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -37,10 +39,14 @@ public class VaccineActivity extends AppCompatActivity {
 
     ProgressBar mProgressBar;
 
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccine);
+
+//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        getSupportActionBar().setCustomView(R.layout.abs_layout);
 
         mProgressBar = findViewById(R.id.progressBar);
 
@@ -97,8 +103,8 @@ public class VaccineActivity extends AppCompatActivity {
                             int available_dose2 = session.getInt("available_capacity_dose2");
                             String available_dose1_str = String.valueOf(available_dose1);
                             String available_dose2_str =String.valueOf(available_dose2);
-                            vaccineData.setDose1("Dose 1: " + available_dose1_str);
-                            vaccineData.setDose2("Dose 2: " + available_dose2_str);
+                            vaccineData.setDose1("1st Dose: " + available_dose1_str);
+                            vaccineData.setDose2("2nd Dose: " + available_dose2_str);
 
                             /* Minimum age limit */
                             int minAgeLimit = session.getInt("min_age_limit");

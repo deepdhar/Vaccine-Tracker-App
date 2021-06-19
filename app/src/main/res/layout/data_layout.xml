@@ -69,50 +69,65 @@
             android:layout_height="wrap_content"
             android:text="Date: 18-06-2021"
             android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"/>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_marginVertical="12dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/available_vaccine_textview"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/dose_bg"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="3dp">
+                android:text="Available Slots:"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:layout_marginBottom="5dp"/>
 
-                <TextView
-                    android:id="@+id/dose1_tv"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dose 1: "
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:background="@drawable/dose_bg"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/dose1_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1st Dose: "
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:background="@drawable/dose_bg"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="3dp">
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/dose2_tv"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dose 2: "
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/dose_bg"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/dose2_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2nd Dose: "
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
 
-        </RelativeLayout>
+                </LinearLayout>
 
+            </RelativeLayout>
+
+        </LinearLayout>
 
 
 

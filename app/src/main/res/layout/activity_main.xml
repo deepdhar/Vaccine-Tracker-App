@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,9 +15,10 @@
         android:layout_centerInParent="true" />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/et1"
+        android:layout_above="@id/getVaccinatedTv"
         android:padding="15dp"
         android:src="@drawable/vaccination"
         android:contentDescription="@string/app_name" />
@@ -30,14 +32,13 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/edittext_bg"
-        android:hint="Enter Pincode"
+        android:hint="@string/enter_pincode"
         android:inputType="number"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
         android:textColor="@color/black"
         android:textColorHint="#959595"
-        android:textSize="16sp"
-        android:autofillHints="" />
+        android:textSize="16sp"/>
 
     <EditText
         android:id="@+id/et2"
@@ -45,39 +46,74 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/et1"
         android:layout_marginHorizontal="18dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:background="@drawable/edittext_bg"
-        android:hint="Enter Date (DD-MM-YYYY)"
+        android:hint="@string/enter_date_dd_mm_yyyy"
         android:inputType="date"
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
         android:textColor="@color/black"
         android:textColorHint="#959595"
-        android:textSize="16sp" />
+        android:textSize="16sp"/>
 
-    <Button
+    <RelativeLayout
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/et2"
         android:layout_marginHorizontal="18dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Get Details"
-        android:textAllCaps="false"
-        android:textSize="16sp" />
+        android:background="@drawable/button_bg">
 
-    <Button
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/search"
+            android:layout_centerInParent="true"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:id="@+id/bookVaccineButton"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="18dp"
         android:layout_marginBottom="25dp"
-        android:backgroundTint="#F4A460"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Book your Vaccination"
-        android:textAllCaps="false"
-        android:textSize="16sp" />
+        android:background="@drawable/book_button_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/book_your_vaccination"
+            android:layout_centerInParent="true"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/getVaccinatedTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et1"
+        android:layout_marginBottom="8dp">
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="#GetVaccinated"
+           android:textSize="17sp"
+           android:textColor="@color/white"
+           android:textStyle="bold"
+           android:textAlignment="center"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
