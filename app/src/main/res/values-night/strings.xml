@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Vaccine Tracker</string>
     <string name="enter_pincode">Enter Pincode</string>
     <string name="book_your_vaccination">Book your Vaccination!</string>
     <string name="search">Search</string>
