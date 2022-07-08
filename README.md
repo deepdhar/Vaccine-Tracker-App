@@ -4,7 +4,7 @@
  
  [![GitHub release](https://img.shields.io/badge/release-v1.0-blue)](https://github.com/deepdhar/Vaccine-Tracker-App/releases/tag/v1.0) 
 
-# Vaccine-Tracker-App
+# Vaccine Tracker (Mobile App)
 A simple app to track vaccination drives going on around you.
 
 ---
