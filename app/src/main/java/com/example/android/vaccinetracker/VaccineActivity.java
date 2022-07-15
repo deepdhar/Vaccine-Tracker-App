@@ -5,12 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +26,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class VaccineActivity extends AppCompatActivity {
 
@@ -47,12 +46,13 @@ public class VaccineActivity extends AppCompatActivity {
 
 //        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
 //        getSupportActionBar().setCustomView(R.layout.abs_layout);
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         mProgressBar = findViewById(R.id.progressBar);
 
         Intent intent = getIntent();
-        String pinCode = intent.getStringExtra(MainActivity.EXTRA_PIN);
-        String date = intent.getStringExtra(MainActivity.EXTRA_DATE);
+        String pinCode = intent.getStringExtra(SearchVaccineActivity.EXTRA_PIN);
+        String date = intent.getStringExtra(SearchVaccineActivity.EXTRA_DATE);
         vaccinationFeeTv = findViewById(R.id.vaccinationFee_tv);
 
         recyclerView = findViewById(R.id.data_recyclerview);
@@ -62,6 +62,11 @@ public class VaccineActivity extends AppCompatActivity {
         mProgressBar.setVisibility(View.VISIBLE);
 
         showVaccineData(pinCode, date);
+
+        ImageView backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> {
+            onBackPressed();
+        });
 
     }
 
