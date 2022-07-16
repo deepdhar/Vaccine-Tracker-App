@@ -1,11 +1,11 @@
 <p align="center">
-  <img style="border-width: 0" width="350" height="350" src="https://user-images.githubusercontent.com/53803245/122521339-5781d200-d032-11eb-9cf5-cbc5671a6258.png">
+  <img style="border-width: 0" width="350" height="350" src="https://user-images.githubusercontent.com/53803245/179342493-5eef654b-06ec-4658-b7c6-a042293e18ed.png">
 </p>
  
  [![GitHub release](https://img.shields.io/badge/release-v1.0-blue)](https://github.com/deepdhar/Vaccine-Tracker-App/releases/tag/v1.0) 
 
 # Vaccine Tracker (Mobile App)
-A simple app to track vaccination drives going on around you.
+Find COVID-19 vaccines around you and get all the info regarding it.
 
 ---
 
@@ -14,7 +14,7 @@ The sudden rise of 2nd wave made all of us vulnerable to the virus leaving us wi
 
 ## Screenshots
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/53803245/122646741-69509b80-d13e-11eb-95e4-9314810085b5.png"/>
+  <img src="https://user-images.githubusercontent.com/53803245/179342454-dd5be7ca-d4d2-4f7d-9cc6-1c3fa68750c3.png"/>
 </p>
 
 ## Key Features
@@ -25,7 +25,7 @@ The sudden rise of 2nd wave made all of us vulnerable to the virus leaving us wi
 ## Tech Stack
 - Java
 - XML
-- API service provided by govt. of India
+- API service provided by Ministry of Health and Family Welfare
 - Library used for Http handling - Volley
 
 ***Android***
